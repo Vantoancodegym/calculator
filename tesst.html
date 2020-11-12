@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a">
+<input type="number" id="b">
+<button type="button" id="+" onclick="dost(this)">+</button>
+<button type="button" id="-" onclick="dost(this)">-</button>
+<button type="button" id="*" onclick="dost(this)">*</button>
+<button type="button" id="/" onclick="dost(this)">/</button>
+<h1 id ="kq"></h1>
+</body>
+</html>
+<script>
+    function dost(e){
+        idofE = e.getAttribute("id")
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        if ( idofE == "+" ){
+            document.getElementById("kq").innerText = (a+b);
+
+        }
+        else if ( idofE == "-" ){
+            document.getElementById("kq").innerText = (a-b);
+        }
+        else if ( idofE == "*" ){
+            document.getElementById("kq").innerText = (a*b);
+        }
+        else if ( idofE == "/" ){
+            document.getElementById("kq").innerText = (a/b);
+        }
+    }
+
+</script>
